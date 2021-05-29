@@ -1,0 +1,119 @@
+/* Resets */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* End Resets */
+
+/* Root */
+:root {
+  --heading-font: "Stardom", serif;
+  --body-font: "Geomanist", sans;
+  font-family: var(--body-font);
+}
+
+/*End root */
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(2rem, 1.6vw + 1.5rem, 2.7rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 1.3vw + 1.3rem, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.4rem, 1.2vw + 1rem, 2rem);
+}
+
+p {
+  line-height: 1.8;
+}
+
+/* End typography */
+
+/* Elements */
+pre {
+  background: #123;
+  color: white;
+  padding: 2rem;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+pre::-webkit-scrollbar {
+  display: none; /* Chrome & Safari */
+}
+
+/* End elements */
