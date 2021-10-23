@@ -336,6 +336,11 @@ End General Typography
   margin-bottom: (var(--spacing));
 }
 
+.my-md {
+  margin-top: calc(var(--spacing) * 2);
+  margin-bottom: calc(var(--spacing) * 2);
+}
+
 .my-lg {
   margin-top: calc(var(--spacing) * 4);
   margin-bottom: calc(var(--spacing) * 4);
@@ -355,6 +360,10 @@ End General Typography
   margin-top: (var(--spacing));
 }
 
+.mt-md {
+  margin-top: calc(var(--spacing) * 2);
+}
+
 .mt-lg {
   margin-top: calc(var(--spacing) * 4);
 }
@@ -364,11 +373,15 @@ End General Typography
 }
 
 .mt-none {
-  margin-top: (var(--spacing));
+  margin-top: 0;
 }
 
 .mb-sm {
   margin-bottom: (var(--spacing));
+}
+
+.mb-md {
+  margin-bottom: calc(var(--spacing) * 2);
 }
 
 .mb-lg {
@@ -380,7 +393,7 @@ End General Typography
 }
 
 .mb-none {
-  margin-bottom: (var(--spacing));
+  margin-bottom: 0;
 }
 
 .w-xxxs {
@@ -444,8 +457,8 @@ End General Typography
 }
 
 .w-viewport {
-  max-width: var(--viewport);
-  width: var(--content-width);
+  max-width: 100%;
+  width: var(--viewport);
 }
 
 .ta-l {
