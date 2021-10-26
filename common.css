@@ -331,6 +331,23 @@ End General Typography
   --flow: 3rem;
 }
 
+.stack {
+  display: grid;
+  grid-template-areas: "stack";
+  position: relative;
+}
+
+.stack > * {
+  grid-area: stack;
+  position: relative;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: var(--overlay, rgba(0, 0, 0, 0.5));
+}
+
 .my-sm {
   margin-top: (var(--spacing));
   margin-bottom: (var(--spacing));
@@ -513,9 +530,253 @@ End General Typography
   padding: clamp(3rem, 2vh + 6vw, 6.5rem) 0;
 }
 
+.py-r-md {
+  padding: clamp(3rem, 2vh + 6vw, 4.5rem) 0;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.col-p-50 {
+  color: var(--primary-50);
+}
+
+.col-p-100 {
+  color: var(--primary-100);
+}
+
+.col-p-200 {
+  color: var(--primary-200);
+}
+
+.col-p-300 {
+  color: var(--primary-300);
+}
+
+.col-p-400 {
+  color: var(--primary-400);
+}
+
+.col-p-500 {
+  color: var(--primary-500);
+}
+
+.col-p-600 {
+  color: var(--primary-600);
+}
+
+.col-p-700 {
+  color: var(--primary-700);
+}
+
+.col-p-800 {
+  color: var(--primary-800);
+}
+
+.col-p-900 {
+  color: var(--primary-900);
+}
+
+.col-s-50 {
+  color: var(--secondary-50);
+}
+
+.col-s-100 {
+  color: var(--secondary-100);
+}
+
+.col-s-200 {
+  color: var(--secondary-200);
+}
+
+.col-s-300 {
+  color: var(--secondary-300);
+}
+
+.col-s-400 {
+  color: var(--secondary-400);
+}
+
+.col-s-500 {
+  color: var(--secondary-500);
+}
+
+.col-s-600 {
+  color: var(--secondary-600);
+}
+
+.col-s-700 {
+  color: var(--secondary-700);
+}
+
+.col-s-800 {
+  color: var(--secondary-800);
+}
+
+.col-s-900 {
+  color: var(--secondary-900);
+}
+
+.col-g-50 {
+  color: var(--gray-50);
+}
+
+.col-g-100 {
+  color: var(--gray-100);
+}
+
+.col-g-200 {
+  color: var(--gray-200);
+}
+
+.col-g-300 {
+  color: var(--gray-300);
+}
+
+.col-g-400 {
+  color: var(--gray-400);
+}
+
+.col-g-500 {
+  color: var(--gray-500);
+}
+
+.col-g-600 {
+  color: var(--gray-600);
+}
+
+.col-g-700 {
+  color: var(--gray-700);
+}
+
+.col-g-800 {
+  color: var(--gray-800);
+}
+
+.col-g-900 {
+  color: var(--gray-900);
+}
+
+.bg-p-50 {
+  background: var(--primary-50);
+}
+
+.bg-p-100 {
+  background: var(--primary-100);
+}
+
+.bg-p-200 {
+  background: var(--primary-200);
+}
+
+.bg-p-300 {
+  background: var(--primary-300);
+}
+
+.bg-p-400 {
+  background: var(--primary-400);
+}
+
+.bg-p-500 {
+  background: var(--primary-500);
+}
+
+.bg-p-600 {
+  background: var(--primary-600);
+}
+
+.bg-p-700 {
+  background: var(--primary-700);
+}
+
+.bg-p-800 {
+  background: var(--primary-800);
+}
+
+.bg-p-900 {
+  background: var(--primary-900);
+}
+
+.bg-s-50 {
+  background: var(--secondary-50);
+}
+
+.bg-s-100 {
+  background: var(--secondary-100);
+}
+
+.bg-s-200 {
+  background: var(--secondary-200);
+}
+
+.bg-s-300 {
+  background: var(--secondary-300);
+}
+
+.bg-s-400 {
+  background: var(--secondary-400);
+}
+
+.bg-s-500 {
+  background: var(--secondary-500);
+}
+
+.bg-s-600 {
+  background: var(--secondary-600);
+}
+
+.bg-s-700 {
+  background: var(--secondary-700);
+}
+
+.bg-s-800 {
+  background: var(--secondary-800);
+}
+
+.bg-s-900 {
+  background: var(--secondary-900);
+}
+
+.bg-g-50 {
+  background: var(--gray-50);
+}
+
+.bg-g-100 {
+  background: var(--gray-100);
+}
+
+.bg-g-200 {
+  background: var(--gray-200);
+}
+
+.bg-g-300 {
+  background: var(--gray-300);
+}
+
+.bg-g-400 {
+  background: var(--gray-400);
+}
+
+.bg-g-500 {
+  background: var(--gray-500);
+}
+
+.bg-g-600 {
+  background: var(--gray-600);
+}
+
+.bg-g-700 {
+  background: var(--gray-700);
+}
+
+.bg-g-800 {
+  background: var(--gray-800);
+}
+
+.bg-g-900 {
+  background: var(--gray-900);
 }
 
 .albatross {
