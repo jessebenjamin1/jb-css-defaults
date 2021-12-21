@@ -211,6 +211,15 @@ End Font Imports
   --secondary-800: #524000;
   --secondary-900: #241e05;
   --spacing: 1rem;
+  --s-sm: clamp(0.875rem, 0.3rem + 2vh + 2vw, 2.25rem);
+  --s-3xs: calc(clamp(0.875rem, 0.3rem + 2vh + 2vw, 2.25rem) * 0.25);
+  --s-2xs: calc(clamp(0.875rem, 0.3rem + 2vh + 2vw, 2.25rem) * 0.5);
+  --s-xs: calc(clamp(0.875rem, 0.3rem + 2vh + 2vw, 2.25rem) * 0.75);
+  --s-md: calc(clamp(0.875rem, 0.3rem + 2vh + 2vw, 2.25rem) * 1.5);
+  --s-lg: calc(clamp(0.875rem, 0.3rem + 2vh + 2vw, 2.25rem) * 2);
+  --s-xl: calc(clamp(0.875rem, 0.3rem + 2vh + 2vw, 2.25rem) * 2.5);
+  --s-2xl: calc(clamp(0.875rem, 0.3rem + 2vh + 2vw, 2.25rem) * 3);
+  --s-c1: clamp(3rem, 2vh + 6vw, 6.5rem);
   font-family: var(--body-font);
 }
 /* ------------------------------------------------- 
@@ -230,28 +239,44 @@ h6 {
   font-weight: 400;
 }
 
-h1,
-.font-xxl {
-  font-size: clamp(2.25rem, 1.6vw + 1.75rem, 3rem);
+.fs-0 {
+  font-size: clamp(0.75rem, 0.71rem + 0.18vw, 0.875rem);
+}
+.fs-1,
+h6 {
+  font-size: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
 }
 
-h2,
-.font-xl {
-  font-size: clamp(1.75rem, 1.3vw + 1.3rem, 2.5rem);
+.fs-2,
+h5 {
+  font-size: clamp(1.125rem, 1.09rem + 0.18vw, 1.25rem);
 }
-
-h3,
-.font-lg {
-  font-size: clamp(1.4rem, 1.2vw + 1rem, 2rem);
+.fs-3,
+h4 {
+  font-size: clamp(1.25rem, 1.11rem + 0.71vw, 1.75rem);
 }
-
-h4,
-.font-md {
-  font-size: clamp(1rem, 1.1vw + 1rem, 1.5rem);
+.fs-4,
+h3 {
+  font-size: clamp(1.5rem, 1.29rem + 1.07vw, 2.25rem);
+}
+.fs-5,
+h2 {
+  font-size: clamp(1.75rem, 1.39rem + 1.79vw, 3rem);
+}
+.fs-6,
+h1 {
+  font-size: clamp(2.25rem, 1.82rem + 2.14vw, 3.75rem);
 }
 
 p {
-  line-height: 2;
+  line-height: 1.9;
+}
+
+/* style lists */
+ul,
+ol {
+  padding-left: 2rem;
+  line-height: 1.75;
 }
 
 p code {
@@ -273,29 +298,6 @@ code {
 
 pre code {
   border: none;
-}
-
-ol,
-ul {
-  padding: 0 0 0 2.5rem;
-  margin-left: 1rem;
-  line-height: 1.75;
-}
-
-ol > * + *,
-ul > * + * {
-  margin-top: 1.25rem;
-}
-
-ul > li > ul > * + * {
-  margin-top: 1.5rem;
-}
-
-ul > li > ul {
-  padding-left: 2rem;
-  margin-left: 0;
-  margin-top: 1.5rem;
-  border-left: 1px solid var(--primary-500);
 }
 /* ------------------------------------------------- 
 End General Typography
@@ -346,71 +348,6 @@ End General Typography
   width: 100%;
   height: 100%;
   background: var(--overlay, rgba(0, 0, 0, 0.5));
-}
-
-.my-sm {
-  margin-top: (var(--spacing));
-  margin-bottom: (var(--spacing));
-}
-
-.my-md {
-  margin-top: calc(var(--spacing) * 2);
-  margin-bottom: calc(var(--spacing) * 2);
-}
-
-.my-lg {
-  margin-top: calc(var(--spacing) * 4);
-  margin-bottom: calc(var(--spacing) * 4);
-}
-
-.my-xl {
-  margin-top: calc(var(--spacing) * 6);
-  margin-bottom: calc(var(--spacing) * 6);
-}
-
-.my-none {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.mt-sm {
-  margin-top: (var(--spacing));
-}
-
-.mt-md {
-  margin-top: calc(var(--spacing) * 2);
-}
-
-.mt-lg {
-  margin-top: calc(var(--spacing) * 4);
-}
-
-.mt-xl {
-  margin-top: calc(var(--spacing) * 6);
-}
-
-.mt-none {
-  margin-top: 0;
-}
-
-.mb-sm {
-  margin-bottom: (var(--spacing));
-}
-
-.mb-md {
-  margin-bottom: calc(var(--spacing) * 2);
-}
-
-.mb-lg {
-  margin-bottom: calc(var(--spacing) * 4);
-}
-
-.mb-xl {
-  margin-bottom: calc(var(--spacing) * 6);
-}
-
-.mb-none {
-  margin-bottom: 0;
 }
 
 .w-xxxs {
@@ -524,19 +461,6 @@ End General Typography
 
 .fw-9 {
   font-weight: 900;
-}
-
-.py-r {
-  padding: clamp(3rem, 2vh + 6vw, 6.5rem) 0;
-}
-
-.py-r-md {
-  padding: clamp(3rem, 2vh + 6vw, 4.5rem) 0;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .col-p-50 {
@@ -818,6 +742,191 @@ End General Typography
 
 .gutter-xl {
   --gutter: 3rem;
+}
+
+.py-2xs {
+  padding-top: var(--s-2xs);
+  padding-bottom: var(--s-2xs);
+}
+
+.py-xs {
+  padding-top: var(--s-xs);
+  padding-bottom: var(--s-xs);
+}
+
+.py-sm {
+  padding-top: var(--s-sm);
+  padding-bottom: var(--s-sm);
+}
+
+.py-md {
+  padding-top: var(--s-md);
+  padding-bottom: var(--s-md);
+}
+
+.py-lg {
+  padding-top: var(--s-lg);
+  padding-bottom: var(--s-lg);
+}
+
+.py-xl {
+  padding-top: var(--s-xl);
+  padding-bottom: var(--s-xl);
+}
+
+.py-2xl {
+  padding-top: var(--s-2xl);
+  padding-bottom: var(--s-2xl);
+}
+
+.py-c1 {
+  padding-top: var(--s-c1);
+  padding-bottom: var(--s-c1);
+}
+
+.py-none {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.px-2xs {
+  padding-left: var(--s-2xs);
+  padding-right: var(--s-2xs);
+}
+
+.px-xs {
+  padding-left: var(--s-xs);
+  padding-right: var(--s-xs);
+}
+
+.px-sm {
+  padding-left: var(--s-sm);
+  padding-right: var(--s-sm);
+}
+
+.px-md {
+  padding-left: var(--s-md);
+  padding-right: var(--s-md);
+}
+
+.px-lg {
+  padding-left: var(--s-lg);
+  padding-right: var(--s-lg);
+}
+
+.px-xl {
+  padding-left: var(--s-xl);
+  padding-right: var(--s-xl);
+}
+
+.px-2xl {
+  padding-left: var(--s-2xl);
+  padding-right: var(--s-2xl);
+}
+
+.px-c1 {
+  padding-left: var(--s-c1);
+  padding-right: var(--s-c1);
+}
+
+.px-none {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.my-2xs {
+  margin-top: var(--s-2xs);
+  margin-bottom: var(--s-2xs);
+}
+
+.my-xs {
+  margin-top: var(--s-xs);
+  margin-bottom: var(--s-xs);
+}
+
+.my-sm {
+  margin-top: var(--s-sm);
+  margin-bottom: var(--s-sm);
+}
+
+.my-md {
+  margin-top: var(--s-md);
+  margin-bottom: var(--s-md);
+}
+
+.my-lg {
+  margin-top: var(--s-lg);
+  margin-bottom: var(--s-lg);
+}
+
+.my-xl {
+  margin-top: var(--s-xl);
+  margin-bottom: var(--s-xl);
+}
+
+.my-2xl {
+  margin-top: var(--s-2xl);
+  margin-bottom: var(--s-2xl);
+}
+
+.my-c1 {
+  margin-top: var(--s-c1);
+  margin-bottom: var(--s-c1);
+}
+
+.my-none {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mx-2xs {
+  margin-left: var(--s-2xs);
+  margin-right: var(--s-2xs);
+}
+
+.mx-xs {
+  margin-left: var(--s-xs);
+  margin-right: var(--s-xs);
+}
+
+.mx-sm {
+  margin-left: var(--s-sm);
+  margin-right: var(--s-sm);
+}
+
+.mx-md {
+  margin-left: var(--s-md);
+  margin-right: var(--s-md);
+}
+
+.mx-lg {
+  margin-left: var(--s-lg);
+  margin-right: var(--s-lg);
+}
+
+.mx-xl {
+  margin-left: var(--s-xl);
+  margin-right: var(--s-xl);
+}
+
+.mx-2xl {
+  margin-left: var(--s-2xl);
+  margin-right: var(--s-2xl);
+}
+
+.mx-c1 {
+  margin-left: var(--s-c1);
+  margin-right: var(--s-c1);
+}
+
+.mx-none {
+  margin-left: 0;
+  margin-right: 0;
 }
 /* ------------------------------------------------- 
 End Utilities
