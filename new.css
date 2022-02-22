@@ -1344,7 +1344,7 @@ Utilities
 }
 
 /* Grid Handlers */
-.flowio-layout-grid > .flowio-layout-inner {
+.grid-layout {
   display: grid;
   grid-template-columns: repeat(var(--col-fill, auto-fit), minmax(var(--col-min, 15rem), var(--col-max, 1fr)));
   grid-auto-rows: var(--grid-auto-rows, 1fr);
