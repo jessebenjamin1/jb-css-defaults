@@ -1397,8 +1397,7 @@ End Utilities
 /* ------------------------------------------------- 
 Buttons
 ------------------------------------------------- */
-.btn,
-.linkbtn > a {
+.btn {
   color: var(--color, white);
   background: var(--background, var(--primary-700));
   border: var(--border, 2px solid var(--primary-700));
@@ -1414,8 +1413,7 @@ Buttons
   transition: background 0.55s, color 0.55s, border 0.55s;
 }
 
-.btn:hover,
-.linkbtn > a:hover {
+.btn:hover {
   color: var(--hColor, var(--primary-500));
   background: var(--hBackground, none);
   border: var(--hBorder, 2px solid var(--primary-500));
@@ -1424,8 +1422,7 @@ Buttons
   transform: var(--hTransform, none);
 }
 
-.btn:focus,
-.linkbtn > a:focus {
+.btn:focus {
   color: var(--fColor, var(--primary-500));
   background: var(--fBackground, none);
   border: var(--fBorder, 2px solid var(--primary-500));
@@ -1435,8 +1432,7 @@ Buttons
   outline: none;
 }
 
-.btn:active,
-.linkbtn > a:active {
+.btn:active {
   color: var(--aColor, var(--primary-500));
   background: var(--aBackground, none);
   border: var(--aBorder, 2px solid var(--primary-500));
